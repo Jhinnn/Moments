@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="212" id="KGk-i7-Jjw" customClass="PageCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="211.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bwb-Ev-xrd">
+                        <rect key="frame" x="8" y="8" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="PKI-0r-5uT"/>
+                            <constraint firstAttribute="height" constant="44" id="Sgk-Ca-xQF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="徐佳鹏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96l-Ql-Xqn">
+                        <rect key="frame" x="60" y="8" width="40" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="实打实的发放时的发生大发发送到 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUF-Ah-eMN">
+                        <rect key="frame" x="60" y="32" width="297" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Im-Ol-HbG" customClass="PYPhotosView">
+                        <rect key="frame" x="60" y="62" width="297" height="130"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="130" id="GH8-CG-jbz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="96l-Ql-Xqn" firstAttribute="leading" secondItem="Bwb-Ev-xrd" secondAttribute="trailing" constant="8" id="03h-wx-5o9"/>
+                    <constraint firstItem="Bwb-Ev-xrd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="2Hl-iz-Myw"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="tUF-Ah-eMN" secondAttribute="trailing" constant="10" id="2n0-2q-flU"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6Im-Ol-HbG" secondAttribute="trailing" constant="10" id="56L-WN-sHw"/>
+                    <constraint firstItem="96l-Ql-Xqn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="MaA-zv-KSg"/>
+                    <constraint firstItem="6Im-Ol-HbG" firstAttribute="top" secondItem="tUF-Ah-eMN" secondAttribute="bottom" constant="12" id="Y78-7b-8PS"/>
+                    <constraint firstItem="tUF-Ah-eMN" firstAttribute="top" secondItem="96l-Ql-Xqn" secondAttribute="bottom" constant="8" id="ZJ9-ns-vH0"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="6Im-Ol-HbG" secondAttribute="bottom" constant="12" id="cOg-sf-7PQ"/>
+                    <constraint firstItem="tUF-Ah-eMN" firstAttribute="leading" secondItem="96l-Ql-Xqn" secondAttribute="leading" id="dzv-Lc-cfd"/>
+                    <constraint firstItem="6Im-Ol-HbG" firstAttribute="leading" secondItem="96l-Ql-Xqn" secondAttribute="leading" id="eSs-WC-k36"/>
+                    <constraint firstItem="Bwb-Ev-xrd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="url-ND-Ve7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="_bottomConstraint" destination="cOg-sf-7PQ" id="0KQ-TW-mZn"/>
+                <outlet property="_contentLabel" destination="tUF-Ah-eMN" id="SUR-3F-vOK"/>
+                <outlet property="_imageHeightConstraint" destination="GH8-CG-jbz" id="7Vn-20-DD1"/>
+                <outlet property="_imageRightConstraint" destination="56L-WN-sHw" id="fuK-0C-57z"/>
+                <outlet property="_photosView" destination="6Im-Ol-HbG" id="r4f-Bh-77i"/>
+                <outlet property="_userImg" destination="Bwb-Ev-xrd" id="u5p-z4-NDQ"/>
+                <outlet property="_userNameLabel" destination="96l-Ql-Xqn" id="cRR-tS-XJ5"/>
+            </connections>
+            <point key="canvasLocation" x="35.5" y="31"/>
+        </tableViewCell>
+    </objects>
+</document>
